@@ -47,6 +47,7 @@ header
 ```
 
 - add seller by adminstrator
+```
 POST: api/v1/admin/seller
 header
     Authorization: Bearer
@@ -54,9 +55,10 @@ body
     name:
     email:
     password:
-
+```
 
 - complete store information by seller
+```
 PUT: api/v1/seller/store
 header
     Authorization: Bearer
@@ -65,8 +67,10 @@ body
     phone:
     latitude:
     longitude:
+```
 
 - add product by seller
+```
 POST: api/v1/seller/product
 header
     Authorization: Bearer
@@ -74,18 +78,22 @@ body
     name:
     price:
     stock_count:
-
+```
 
 - products listing by lat&lng
+```
 POST: api/v1/customer/products
 body
    latitude:
     longitude:
     distance:
+```
 
 - buy product by user
+```
 POST: api/v1/customer/buy
 header
     Authorization: Bearer
 body
     product_id:
+```
