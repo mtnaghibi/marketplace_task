@@ -7,7 +7,7 @@ please follow this steps:
 - run php artisan create:admin for generate administrator
 
 
--register a customer
+- register a customer
 POST: api/v1/auth/register
 body
     name:
@@ -15,32 +15,32 @@ body
     password:
 
 
--login a customer,seller,admin
+- login a customer,seller,admin
 POST: api/v1/auth/login
 body
     email:
     password:
 
 
--refresh token
+- refresh token
 GET: api/v1/auth/refresh
 header
     Authorization: Bearer
 
 
--logout user
+- logout user
 GET: api/v1/auth/logout
 header
     Authorization: Bearer
 
 
--get user info
+- get user info
 GET: api/v1/auth/user
 header
     Authorization: Bearer
 
 
--add seller by adminstrator
+- add seller by adminstrator
 POST: api/v1/admin/seller
 header
     Authorization: Bearer
@@ -50,7 +50,7 @@ body
     password:
 
 
--complete store information by seller
+- complete store information by seller
 PUT: api/v1/seller/store
 header
     Authorization: Bearer
@@ -60,7 +60,7 @@ body
     latitude:
     longitude:
 
--add product by seller
+- add product by seller
 POST: api/v1/seller/product
 header
     Authorization: Bearer
@@ -70,14 +70,14 @@ body
     stock_count:
 
 
--products listing by lat&lng
+- products listing by lat&lng
 POST: api/v1/customer/products
 body
    latitude:
     longitude:
     distance:
 
--buy product by user
+- buy product by user
 POST: api/v1/customer/buy
 header
     Authorization: Bearer
